@@ -5,6 +5,6 @@ Group Name: TEAM_NAME
 
 Team Members: STUDENTS_NETIDS
 
-Project Manager: PM_NETID
+Project Manager: weustis2, jonahlt2
 
 Project Description: 
