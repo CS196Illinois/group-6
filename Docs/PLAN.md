@@ -1,9 +1,9 @@
 # Projected Timeline
 
 ### Sprint 1
-Divide 6BG worth of data into chunks to be distributed evenly among group members.
+Divide 6BG worth of images into chunks to be distributed evenly among group members.
 
-Label 6BG worth of frames collected from the Quad Cam and label them using CVAT.
+Label the frames collected from the Quad Cam using CVAT.
 
 Example labels include:
 
