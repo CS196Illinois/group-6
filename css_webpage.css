@@ -1,7 +1,8 @@
 /* The entire page */
 html, body{
     margin: 0;
-    height: 100%
+    height: 100%;
+    background-color: #fefaf1;
 }
 
 
@@ -18,7 +19,11 @@ li {
     float: left;
 }
 
-li a {
+li a.active-button {
+    font-family: "Segoe UI",Arial,sans-serif;
+    letter-spacing: 0.5mm;
+    font-size: 1em;
+    -webkit-text-stroke: 0.5px white;
     display: block;
     color: white;
     text-align: center;
@@ -26,10 +31,23 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+li a#active-logo {
+    /* change this to make it looks better, also add a link to the main page in the future */
+    font-family: Lucida Console;
+    letter-spacing: 0.5mm;
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px rgb(255, 216, 88);
+    display: block;
+    color: rgb(255, 216, 88);
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+li a.active-button:hover {
     background-color: #5495b681;
 }
-  
+
 
 /* Image CSS*/
 img#video {
