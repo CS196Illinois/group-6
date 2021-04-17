@@ -3,58 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>QuadWatch</title>
+    <link rel="stylesheet" href="webpage.css">
 </head>
+
+
 <body>
-    <div class="site-header">
-        <h1> QuadWatch </h1>  <!-- put the name of our website here, no need to be "QuadWatch" -->
+    <!-- Name of our website, no need to be "QuadWatch" -->
+    <div class="logo">
+        <h1> QuadWatch </h1>  
     </div>
-    <div class="nav-bar">
-        --------this is the navigation bar-------- <!-- link to other webpage, we can add a search bar -->
+
+    <!-- Navigation bar -->
+    <div id="nav-bar">
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Data Analytics</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
     </div>
+
+    <!-- Main part for the content that we want to show -->
     <div class="content-main">
-        <div class="video-section">  <!-- first main part: the live feed video -->
-            <div id="video-title"> <h2> Live Feed Quad Cam </h2> </div>
+
+        <!-- I. Live Feed Video -->
+        <div class="video-section">  
+            <div id="heading"> <h2> Live Feed Quad Cam </h2> </div>
             <div>
                 live feed image here in the future <br>
-                -------------------------------- <br>
-                |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                -------------------------------- <br>
+                <img src="temp_img_for_video.jpg" alt="video not found" id="video">
             </div>
         </div>
-        <div class="analytics-section">  <!-- second main part: analytics -->
-            <div id="analytics-title"> <h2> Data Analytics </h2> </div>
-            <div class="example">  <!-- example holds one example of the analytics-->
+        
+        <!-- II. Analytics -->
+        <!-- planning to add "image hover overlay" for the analytics picture and enable visitors to 
+            do some interaction, such as like or comment -->
+        <div class="analytics-section">  
+            <div class="heading" id="analytics-title"> <h2> Data Analytics </h2> </div>
+
+            <!-- 1st example -->
+            <div class="container">
                 <div> <h3>the first data analytics</h3> </div>
                 <div>
                     corresponding content here in the future <br>
-                    -------------------------------- <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    -------------------------------- <br>
+                    <img src="temp_data_analytics_1.jpg" alt="picture not found">
                 </div>
             </div>
 
-            <div class="example">
+            <!-- 2nd example -->
+            <div class="container">
                 <div> <h3>second data analytics</h3> </div>
                 <div>
                     corresponding content here in the future <br>
-                    -------------------------------- <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    |||||||||||||||||||||||||||||||||||||||||||||||||||||| <br>
-                    -------------------------------- <br>
+                    <img src="temp_data_analytics_2.jpg" alt="picture not found" height="540" width="960">
                 </div>
             </div>
+
         </div>
     </div>
-    <div class="footer"> put our footer here </div>
 
+    <div>
+        <br>  <!-- seperation line, can be changed with something else -->
+    </div>
+    <!-- Footer, put project/author info here -->
+    <div class="footer"> 
+        put our footer here
+     </div>
 
 </body>
+
+
 </html>
