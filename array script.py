@@ -33,6 +33,18 @@ def date_times():
         date_list.append(date)
     return date_list
 
+def activity(type):
+    return_list = []
+    for file in listdir(r"C:\Users\Denny\Desktop\cs196 project\labels"):
+        count = 0
+        with open(r"C:\Users\Denny\Desktop\cs196 project\labels\\" + file, "r") as fl:
+            for line in fl.readlines():
+                if line[0] == type:
+                    count += 1
+            return_list.append(count)
+    return return_list
+
+
 
 
 
@@ -42,8 +54,13 @@ df = {
 "file_name" : file_names(),
 "hex_time" : hex_times(),
 "unix_time" : unix_times(),
-"date_time" : date_times()
+"date_time" : date_times(),
+"activity 0" : activity("0"),
+"activity 1" : activity("1"),
+"activity 2" : activity("2"),
 }
 
 
-df = pd.DataFrame(df, columns=["file_name","hex_time","unix_time","date_time"])
+df = pd.DataFrame(df, columns=["file_name","hex_time","unix_time","date_time","activity 0","activity 1","activity 2"])
+
+print(df)
