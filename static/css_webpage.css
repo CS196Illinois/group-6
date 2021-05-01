@@ -1,0 +1,122 @@
+/* The entire page */
+html, body {
+    margin: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* #content-main {
+} */
+
+
+/* Container and Sections */
+.img-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10mm;
+}
+
+.video-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10mm;
+}
+
+.sub-section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15mm;
+    border-bottom: 1px solid #bbb;
+}
+
+
+/* Nagivation Bar CSS*/
+#nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #006699;
+    box-shadow: 0px 5px 15px grey;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+a.active-button {
+    display: block;
+    color: rgb(229, 226, 226);
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    float: left;
+}
+
+#active-logo {
+    /* change this to make it looks better, also add a link to the main page in the future */
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    display: block;
+    color: lavenderblush;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    background-color: rgb(4, 130, 172);
+    float: left;
+}
+
+a.active-button:hover {
+    background-color: #5495b681;
+}
+
+
+/* Image CSS*/
+img#video {
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    display: block;
+    max-width: 40%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    background-image: url("blurred-city-view.jpg");
+    background-size: 70%;
+    padding: 5mm;
+}
+
+
+/* Divider*/
+.empty {
+    padding: 5mm;
+}
+
+
+/* Footer CSS */
+#footer {
+    padding: 3mm;
+    background-color: #2b6b8b;
+    padding-bottom: 3mm;
+    color:lightgrey;
+}
+
+
+
+
