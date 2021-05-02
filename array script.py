@@ -1,12 +1,11 @@
-from datetime import datetime
 import pandas as pd
 from os import listdir
 import datetime
 import requests
+import json
+import time
 
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 
 #path to labels
 path = (r"C:\Users\Denny\Desktop\cs196 project\labels")
@@ -55,33 +54,47 @@ def total_activity():
             return_list.append(len(fl.readlines()))
     return return_list
 
-def weather():
-    pass
+def temperature():
+    return_list = []
+    day = date_times()[0]
+    day = str(day)[:10]
+    current_temp = get_avg_temp(day)
 
 
-#not sure why requests are not working, getting a respose of 401 (error with api key)
-"""
-payload = {"x-api-key": "rIp4xQb45wMKhFJg6ELrYECBiVTIlz3M", "lat" : "40.1020", "lon" : "88.2272", "start" : "2021-04-23", "end" : "2021-04-24"}
-r = requests.get('https://api.meteostat.net/v2/point/hourly', params=payload)
-print(r)
-"""
+    for date in date_times():
+        if date[:10] == day:
+            return_list.append(float(current_temp))
+        else:
+            current_temp = get_avg_temp(date[:10])
+            day = date[:10]
+            return_list.append(current_temp)
+
+    return return_list
+
+
+def get_avg_temp(d):
+    time.sleep(0.5)
+    header = {"x-api-key": "rIp4xQb45wMKhFJg6ELrYECBiVTIlz3M"}
+    payload = {"lat" : "40.1020", "lon" : "-88.2272", "start" : d, "end" : d}
+    r = requests.get('https://api.meteostat.net/v2/point/daily', params=payload, headers=header)
+    json_data = json.loads(r.text)
+    data = json_data["data"]
+    return data[0]["tavg"]
+
+
+
+
 
 #creating array with pandas
 df = {
-"file_name" : file_names(),
-"hex_time" : hex_times(),
-"unix_time" : unix_times(),
 "date_time" : date_times(),
 "activity 0" : activity("0"),
 "activity 1" : activity("1"),
 "activity 2" : activity("2"),
-"total_activity" : total_activity()
+"total_activity" : total_activity(),
+"temperature" : temperature()
 }
 
 
-df = pd.DataFrame(df, columns=["file_name","hex_time","unix_time","date_time","activity 0","activity 1","activity 2","total_activity"])
-
-
-#example seaborn plot with total activity over time on the quad
-ax = sns.lineplot(x = "date_time", y= "total_activity", data = df)
-plt.show()
+df = pd.DataFrame(df, columns=["date_time","activity 0","activity 1","activity 2","total_activity","temperature"])
+df.to_csv('cs196_dataframe.csv',index=False)
