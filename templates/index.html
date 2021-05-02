@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuadWatch</title>
+    <link rel="stylesheet" href="static/css_webpage.css">
+    
+</head>
+
+
+<body>
+    <!-- [ Name of our website, no need to be "QuadWatch" ] -->
+    <div id="logo">
+        <img src="static/Logo.png"> 
+    </div>
+
+    <!-- [ Navigation bar ] -->
+    <!-- possibly search bar in the future -->
+    <div id="nav-bar">
+        <a id="active-logo" href="#logo"> QuadWatch </a>
+        <a class="active-button" href="#logo">Home</a>
+        <a class="active-button" href="#vid">Live Feed</a>
+        <a class="active-button" href="#first-ana">Data Analytics</a>
+        <a class="active-button" href="#footer">Contact</a>
+    </div>
+
+    <!-- [ Main part for the content that we want to show ] -->
+    <div id="content-main">
+
+        <!-- [ I. Live Feed Video ] -->
+        <div class="sub-section" id="vid">
+            <div id="heading"> <h2> Live Feed Quad Cam </h2> </div>
+            <div class="video-container">
+                <!-- live feed image here in the future -->
+                <img src="static/temp_img_for_video.jpg" alt="image not found" id="video">
+            </div>
+        </div>
+        
+        <!-- [ II. Analytics ] -->
+        <!-- planning to add "image hover overlay" for the analytics picture and enable visitors to 
+            do some interaction, such as like or comment -->
+        <div class="sub-section">  
+            <div class="heading" id="analytics-title"> <h2> Data Analytics </h2> </div>
+
+            <!-- [ 1st example ] -->
+            <div class="img-container" id="first-ana">
+                <div> <h3>data analytics #1</h3> </div>
+                <div>
+                    <!-- corresponding content here in the future -->
+                    <img src="static/temp_data_analytics_1.jpg" alt="picture not found">
+                </div>
+            </div>
+
+            <!-- [ 2nd example ] -->
+            <div class="img-container" id="second-ana">
+                <div> <h3>data analytics #2</h3> </div>
+                <div>
+                    <!-- corresponding content here in the future -->
+                    <img src="static/temp_data_analytics_2.jpg" alt="picture not found" height="540" width="960">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="empty">
+        <br>  <!-- divider -->
+    </div>
+    <!-- [ Footer, put project/author info here ] -->
+    <div id="footer"> 
+        University of Illinois at Urbana-Champaign <br>
+        CS196 2021 Spring <br>
+        Group 6 <br>
+    </div>
+
+    
+    <script src="static/js_webpage.js"></script>
+</body>
+
+
+</html>
